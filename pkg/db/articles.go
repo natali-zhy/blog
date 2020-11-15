@@ -9,16 +9,11 @@ import (
 func CreateArticle(article models.Article) (newUserId int64, err error) {
 	newUserId = 0
 
-	fmt.Println(article.Author)
-
 	res, err := DB.Exec("INSERT INTO `Article` (`Author`, `Text`, `Data`) "+
 		"VALUES (?, ?, ?)", article.Author, article.Text, article.Data)
-	fmt.Println(res)
 	if err != nil {
 		return
 	}
-
-	fmt.Println(article.Author)
 
 	newUserId, err = res.LastInsertId()
 	if err != nil {

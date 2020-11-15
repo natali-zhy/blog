@@ -1,0 +1,10 @@
+{
+  "AddrHttp": ":3006",
+  "Templates": "/",
+  "db": {
+    "AddrMysql": "localhost",
+    "UserMysql": "root",
+    "PasswordMysql": "",
+    "Database": "article"
+  }
+}
